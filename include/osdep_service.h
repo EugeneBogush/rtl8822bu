@@ -41,6 +41,10 @@
 	#include <osdep_service_linux.h>
 #endif
 
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 11, 0)
+#include <linux/sched/signal.h>
+#endif
+
 #ifdef PLATFORM_OS_XP
 	#include <osdep_service_xp.h>
 #endif
